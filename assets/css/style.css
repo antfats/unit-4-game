@@ -1,0 +1,59 @@
+body{
+    background-image:url("../images/houndstooth-pattern.png");
+}
+#heading{
+    background:orange;
+    margin:5px 0px 5px 5px;
+}
+#directions{
+    background:rgb(219, 188, 129);
+    margin:15px 0px 15px 10px;
+}
+#randomNum{
+    background:rgb(124, 207, 124);
+    margin-bottom:15px;
+    padding-bottom:30px;
+}
+.scoreBoard{
+    background:rgb(62, 158, 214);
+
+}
+.pictures{
+    /* margin-left:20px;
+    padding-left:30px; */
+
+
+}
+#imgOne{
+    height:200px;
+    width:200px;
+    overflow:hidden;
+    display:inline;
+    margin-right:45%;
+}
+#imgTwo{
+    height:200px;
+    width:200px;
+    overflow:hidden;
+    display:inline;
+    margin-left: 20%;
+}
+#imgThree{
+    height:200px;
+    width:200px;
+    overflow:hidden;
+    display:inline;
+    margin-left: 60%;
+
+}
+#score{
+     background: rgb(72, 146, 72);
+     display:inline;
+     margin:25px 0px 0px 10px;
+
+
+}
+#scoreNum{
+    background:rgb(72, 146, 72);
+
+}
