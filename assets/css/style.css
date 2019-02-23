@@ -23,7 +23,9 @@ display:inline;
 width:100px;
 height:100px;
 
-
+}
+#targetNumber{
+    background:rgb(124, 207, 124);
 }
 #imgOne{
     height:100px;

@@ -1,8 +1,13 @@
 $(document).ready(); {
 
-
-
-
+    var playerScore = 0;
+    var wins = 0;
+    var losses = 0;
+    var counter = 0;
+    var imgOne = Math.floor(Math.random() * 12) + 1;
+    var imgTwo = Math.floor(Math.random() * 12) + 1;
+    var imgThree = Math.floor(Math.random() * 12) + 1;
+    var targetNum = 0;
     //The player clicks a crystal
 
     //each crystal has a random value each game
@@ -15,7 +20,10 @@ $(document).ready(); {
 
     //once the round has ended, everything except the wins/losses div should reset.
     function startgame() {
-        var targetNum = Math.floor(Math.random() * 120) + 20;
+        var targetNum = Math.floor(Math.random() * 101 + 19)
+
+        $("#targetNumber").append(targetNum);
+        console.log(targetNum)
 
         var playerScore = 0;
         var wins = 0;
@@ -23,12 +31,10 @@ $(document).ready(); {
         var counter = 0;
 
     }
-    startgame();
+
 
     for (var i = 1; i < 2; i++) {
-        var imgOne = Math.floor(Math.random() * 12) + 1;
-        var imgTwo = Math.floor(Math.random() * 12) + 1;
-        var imgThree = Math.floor(Math.random() * 12) + 1;
+
 
         var imageCrystal1 = $("<img>");
         var imageCrystal2 = $("<img>");
@@ -43,48 +49,46 @@ $(document).ready(); {
         $("#crystals").append(imageCrystal1)
         $("#crystals").append(imageCrystal2)
         $("#crystals").append(imageCrystal3)
-        imageCrystal1.attr("data-crystalvalue", imgOne);
-        imageCrystal2.attr("data-crystalvalue", imgTwo);
-        imageCrystal3.attr("data-crystalvalue", imgThree);
+        $("#crystals").attr("data-crystalvalue")
 
     }
+    //I couldnt get the players number to update with crystal clicks!!! ive tried a few ways and wasted quite a few more hours trying to figure it out
+    //Set the players number to a variable
+    //Add the crystals value to the player number when the specific crystal was clicked
+
+
+
+
+
+
     $(".crystal-image").click(function () {
-        counter = 0;
         var crystalValue = ($(this).attr("data-crystalvalue"));
+        var targetNum = targetNum + imgOne;
+        // var targetNum = $("#targetNumber")
+        // var randomNum = $("#randomNum")
         crystalValue = parseInt(crystalValue);
-        counter += crystalValue;
-        $("#randomNum").text(crystalValue);
-        // var currentValue = (parseInt($("#randomNumber").text()));
-        // var result = crystalValue + currentValue;
-        // $("#randomNum").text(result);
+        $("#randomNum").text(targetNum)
+        // $("#randomNum").text(crystalValue);
+        // crystalValue += randomNum;
+
+
+
+        //win conditions
+        if (randomNum === targetNum) {
+            alert("You Win!");
+            wins++;
+            $("#wins").text(wins);
+
+        }
+        else if (randomNum > targetNum) {
+            losses++;
+            alert("You Lose");
+            $("#losses").text(losses);
+
+
+        }
+
 
     });
-    $("#hiButton").click(function () {
-        console.log("HI");
-    });
-
-    // $(".pictures").click = function(){
-    //     console.log("Hello world");
-
-    //     playerScore = $((".pictures").this);
-    //     $("#scoreNum").append(playerScore);
-    //     console.log(playerScore);
-
-
 };
-if (playerScore === targetNum) {
-    alert("You Win!");
-    wins++;
-
-}
-else {
-    losses++;
-    alert("You Lose");
-    // $(".pictures").click = function () {
-    //     console.log("Hello world");
-
-    //     playerScore = $((".pictures").this);
-    //     $("#scoreNum").append(playerScore);
-    //     console.log(playerScore);
-    //     
-}
+startgame();
