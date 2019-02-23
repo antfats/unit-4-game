@@ -18,33 +18,43 @@ body{
     background:rgb(62, 158, 214);
 
 }
-.pictures{
-    /* margin-left:20px;
-    padding-left:30px; */
+.crystal-image{
+display:inline;
+width:100px;
+height:100px;
 
 
 }
 #imgOne{
-    height:200px;
-    width:200px;
+    height:100px;
+    width:100px;
     overflow:hidden;
-    display:inline;
-    margin-right:45%;
+    /* position:relative; */
 }
 #imgTwo{
-    height:200px;
-    width:200px;
+    height:100px;
+    width:100px;
     overflow:hidden;
-    display:inline;
-    margin-left: 20%;
+    /* position:relative; */
+    margin-right:25%;
+
 }
 #imgThree{
-    height:200px;
-    width:200px;
+    height:100px;
+    width:100px;
     overflow:hidden;
-    display:inline;
-    margin-left: 60%;
+    margin-right:60%;
 
+    /* position:relative; */
+}
+.images{
+    height:100px;
+    width:100px;
+    
+}
+#btn3{
+   margin-right:60%;
+   
 }
 #score{
      background: rgb(72, 146, 72);
